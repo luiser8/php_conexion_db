@@ -2,7 +2,7 @@
 
 function conexion(){
     try{
-        $pdo = new PDO("mysql:host=localhost;dbname=mvc", "root", "avior_db");
+        $pdo = new PDO("mysql:host=localhost;dbname=mvc", "root", "password");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }catch(Exeption $e){
         echo $e->getMessage();
@@ -48,8 +48,3 @@ function update($id_employee, $cedula, $name, $salary){
         'salary'=>$salary
     ]);
 }
-
-var_dump(select());
-//insert(29937746, "Auro", "$556");
-//delete(29937746);
-//update(33, 4433445, "Karla", "$7788");

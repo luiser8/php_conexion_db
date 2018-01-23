@@ -2,7 +2,7 @@
 
 class Db{
     public static function conexion(){
-        $conexion = new mysqli('localhost', 'root', 'avior_db', 'mvc', '3306');
+        $conexion = new mysqli('localhost', 'root', 'password', 'mvc', '3306');
         $conexion->query("SEY NAMES 'utf8'");
         return $conexion;
     }
@@ -50,6 +50,3 @@ class Funciones{
         return $this->db->query($sql);
     }
 }
-
-$employee = new Funciones();
-var_dump($employee->select());
